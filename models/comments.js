@@ -21,6 +21,13 @@ const commentSchema = new Schema({
       }
 });
 
+// Single-field index on authorId to optimize queries by author
+commentSchema.index({ authorId: 1 });
+
+// Single-field index on postId to optimize queries by post
+commentSchema.index({ postId: 1 });
+
+
 const Comment = mongoose.model('Comment', commentSchema);
 
 export default Comment;
