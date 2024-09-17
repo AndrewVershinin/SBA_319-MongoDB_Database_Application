@@ -15,7 +15,7 @@ app.get('/api', (req, res) => {
     res.send('Welcome')
 });
 
-// Use the user routes
+// Use the routes
 app.use('/api', userRoute);
 app.use('/api', postRoute);
 app.use('/api', commentRoute);
